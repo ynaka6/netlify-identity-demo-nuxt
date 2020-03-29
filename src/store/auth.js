@@ -29,6 +29,21 @@ export const actions = {
         })
       }
     })
+    this.$netlifyIdentity.on('close', () => {
+      const user = this.$netlifyIdentity.currentUser()
+      // eslint-disable-next-line
+      console.log(user)
+      if (user) {
+        commit('SET_USER', {
+          username: user.user_metadata.full_name,
+          email: user.email,
+          access_token: user.token.access_token,
+          expires_at: user.token.expires_at,
+          refresh_token: user.token.refresh_token,
+          token_type: user.token.token_type
+        })
+      }
+    })
     this.$netlifyIdentity.init({
       APIUrl: process.env.NETLIFY_IDENTITY_ENDPOINT_URL
     })
