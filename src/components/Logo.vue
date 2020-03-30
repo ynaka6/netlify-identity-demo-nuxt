@@ -1,8 +1,8 @@
 <template>
   <svg
     class="NuxtLogo"
-    width="245"
-    height="180"
+    width="122"
+    height="90"
     viewBox="0 0 452 342"
     xmlns="http://www.w3.org/2000/svg"
   >

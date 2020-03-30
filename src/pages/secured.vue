@@ -1,13 +1,14 @@
 <template>
   <div class="max-w-3xl mx-auto p-2">
     <h3 class="text-2xl text-center mt-10">
-      Home
+      Secured Page
     </h3>
+    <pre class="mt-6 p-2 bg-gray-100 border rounded" v-text="user" />
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   computed: {
@@ -15,12 +16,12 @@ export default {
       user: 'auth/user'
     })
   },
-  methods: {
-    ...mapActions({
-      openLogin: 'auth/openLogin',
-      openSignup: 'auth/openSignup',
-      logout: 'auth/logout'
-    })
+  created() {
+    if (process.browser) {
+      if (!this.user) {
+        this.$router.push('/')
+      }
+    }
   }
 }
 </script>
