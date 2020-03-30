@@ -25,7 +25,7 @@
                   <a
                     href="#"
                     class="button button--primary lg:w-1/2"
-                    @click.prevent="logout"
+                    @click.prevent="onLogout"
                   >
                     Logout
                   </a>
@@ -99,6 +99,12 @@ export default {
     })
   },
   methods: {
+    onLogout() {
+      this.logout()
+      if (this.$route.path !== '/') {
+        this.$router.push('/')
+      }
+    },
     ...mapActions({
       openLogin: 'auth/openLogin',
       openSignup: 'auth/openSignup',
