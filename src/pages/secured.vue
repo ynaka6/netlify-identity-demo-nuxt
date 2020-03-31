@@ -20,6 +20,7 @@ export default {
     if (process.browser) {
       if (!this.user) {
         this.$router.push('/')
+        this.$toast.show(`You'll need to login`)
       }
     }
   }
