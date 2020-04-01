@@ -66,6 +66,7 @@
             href="https://github.com/ynaka6/netlify-identity-demo-nuxt"
             target="_blank"
             class="flex items-center"
+            rel="noopener noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
