@@ -4,7 +4,7 @@
 
 > Netlify Identity Widget Demo for Nuxt.js
 
-https://netlify-identity-demo-nuxt.netlify.com/
+https://netlify-identity-demo-nuxt.netlify.app/
 
 ## Build Setup
 
