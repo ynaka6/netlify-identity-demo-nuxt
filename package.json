@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-netlify-identity",
+  "name": "netlify-identity-demo-nuxt",
   "version": "1.0.0",
-  "description": "My splendid Nuxt.js project",
+  "description": "Netlify Identity Widget & Nuxt.js project",
   "author": "ynaka6",
   "private": true,
   "scripts": {
